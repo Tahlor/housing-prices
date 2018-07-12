@@ -18,8 +18,6 @@ targs = pd.DataFrame(np.asarray([1, 6]))
 model_list = ["GradientBoosting", "GradientBoostingProduction", "ElasticNet", "RandomForest", "XGBoosting", "SGD", "ElasticNetCV", "Lasso", "SVR", "OLS",
               "NotARealModel"]
 
-model_list = ["OLS"]
-
 def create_model():
     model = model_functions.create_model(feats_with_id, targs, type="ElasticNet")
     return model

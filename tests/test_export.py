@@ -5,7 +5,9 @@ import pandas as pd
 from housing_prices import export_data
 
 dirname = os.path.dirname(__file__)
-export_path  = os.path.join(dirname, r'test_data/text-export.csv')
+export_path = os.path.join(dirname, r'test_data/text-export.csv')
+export_path1 = os.path.join(dirname, r'test_data/text-export v_01.csv')
+
 
 def test_export():
 
@@ -23,8 +25,12 @@ def test_export():
     # Export dataframe
     export_data.export_data(original_df, export_path)
 
-    # Verify file does exist
+    # Verify incrementer works
+    export_data.export_data(original_df, export_path)
+
+    # Verify files exist
     assert os.path.exists(export_path)
+    assert os.path.exists(export_path1)
 
     # Read in file
     df = pd.read_csv(export_path)
@@ -34,10 +40,15 @@ def test_export():
 
     # Remove file
     os.remove(export_path)
+    os.remove(export_path1)
 
     # Verify file was deleted
     assert not os.path.exists(export_path)
+    assert not os.path.exists(export_path1)
 
 if __name__=='__main__':
     test_export()
+
+
+
 

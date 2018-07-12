@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def process_data(path):
     """Takes a data file path input and returns a Pandas dataframe.
@@ -15,6 +14,3 @@ def process_data(path):
 
 if __name__=="__main__":
     df = process_data(r'../data/train.csv')
-    print(len(df))
-    df = process_data(r'../data/test.csv')
-    print(len(df))

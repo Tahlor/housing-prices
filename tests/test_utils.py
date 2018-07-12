@@ -3,7 +3,6 @@
 
 import numpy as np
 import pandas as pd
-
 import utils
 
 feats_with_id = pd.DataFrame({'col1': [3, 4], 'Id': [1, 2]})
@@ -32,7 +31,12 @@ def test_checkEqual():
     assert utils.checkEqual(z,x)
     assert not utils.checkEqual(y, x)
 
+def test_reset_seed():
+    utils.reset_seed(47)
+    assert np.random.get_state()[1][0] == 47
+
 if __name__=='__main__':
-    test_drop_features()
-    test_invert_dictionary()
-    test_checkEqual()
+    #test_drop_features()
+    #test_invert_dictionary()
+    #test_checkEqual()
+    test_reset_seed()

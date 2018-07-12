@@ -24,11 +24,11 @@ def reset_seed(seed=42):
     import random as rn
     import os
     os.environ['PYTHONHASHSEED'] = '0'
-    np.random.seed(SEED)
-    rn.seed(SEED)
+    np.random.seed(seed)
+    rn.seed(seed)
     session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
     from keras import backend as K
-    tf.set_random_seed(SEED)
+    tf.set_random_seed(seed)
     sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
     K.set_session(sess)
 

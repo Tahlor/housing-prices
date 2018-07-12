@@ -1,16 +1,17 @@
 """Test the export function defined in export_data.py
 """
-
-from housing_prices import export_data
 import os
 import pandas as pd
+from housing_prices import export_data
+
+dirname = os.path.dirname(__file__)
+export_path  = os.path.join(dirname, r'test_data/text-export.csv')
 
 def test_export():
-    export_path = r'./test_data/text-export.csv'
 
     if os.path.exists(export_path):
         os.remove(export_path)
-        print("Removing old file...")
+        #print("Removing old file...")
 
     # Verify file does not exist
     assert not os.path.exists(export_path)

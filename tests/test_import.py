@@ -2,9 +2,12 @@
 """
 
 import housing_prices
+import os
+dirname = os.path.dirname(__file__)
+train_path = os.path.join(dirname, r'test_data/train.csv')
 
 def test_import():
-    train_path = r'./test_data/train.csv'
+
     new_df = housing_prices.import_data.process_data(train_path)
     assert new_df.shape == (1460, 81)
 

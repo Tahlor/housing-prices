@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: my-pkg
+Version: 0.0.1
+Summary: Getting Started with Python unit testings, documentations, CI and code coverage
+Home-page: https://github.com/tahlor/getting-started
+Author: Taylor Archibald
+Author-email: tahlor@gmail.com
+License: ['MIT']
+Description: [![codecov](https://codecov.io/gh/Tahlor/housing-prices/branch/master/graph/badge.svg)](https://codecov.io/gh/Tahlor/housing-prices)
+        [![Build Status](https://travis-ci.org/Tahlor/housing-prices.svg?branch=master)](https://travis-ci.org/Tahlor/housing-prices)
+        [![Code Health](https://landscape.io/github/Tahlor/housing-prices/master/landscape.svg?style=flat)](https://landscape.io/github/Tahlor/housing-prices/master)
+        
+        
+        # housing-prices
+        Full API Documentation available at: [github pages](https://tahlor.github.io/housing-prices/html).  
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6

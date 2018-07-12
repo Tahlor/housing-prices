@@ -1,0 +1,13 @@
+actionid: py35
+msg: installpkg
+cmdargs: ['/medic/github/housing-prices-final/.tox/py35/bin/pip', 'install', '/medic/github/housing-prices-final/.tox/dist/housing_prices-0.0.1.zip']
+
+Processing ./.tox/dist/housing_prices-0.0.1.zip
+Requirement already satisfied: numpy in ./.tox/py35/lib/python3.5/site-packages (from housing-prices==0.0.1) (1.14.5)
+Building wheels for collected packages: housing-prices
+  Running setup.py bdist_wheel for housing-prices: started
+  Running setup.py bdist_wheel for housing-prices: finished with status 'done'
+  Stored in directory: /home/taylor/.cache/pip/wheels/6b/e2/c2/00f3faf47f08b1667e1f30997089ff9f715752a8fa0f089ff7
+Successfully built housing-prices
+Installing collected packages: housing-prices
+Successfully installed housing-prices-0.0.1

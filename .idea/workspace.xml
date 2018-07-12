@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b83983b-7485-4c06-95b7-132fd9fdb414" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/housing_prices/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/housing_prices/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="53" column="119" lean-forward="true" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
+            <state relative-caret-position="386">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -63,15 +64,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/test_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_transforms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_transforms.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,23 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/housing_prices/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_export.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_export.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_export.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+            <state relative-caret-position="266">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#59#68#0" expanded="true" />
               </folding>
@@ -117,11 +97,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="test_main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-829" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coverage.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coverage.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="412" column="38" lean-forward="true" selection-start-line="412" selection-start-column="38" selection-end-line="412" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="export_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/housing_prices/export_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="13" selection-end-line="14" />
+            <state relative-caret-position="405">
+              <caret line="27" selection-start-line="19" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -137,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Check</find>
       <find>test_perform_single_op</find>
       <find>drop_features</find>
       <find>Scaler object and scaling</find>
@@ -167,6 +162,7 @@
       <find>sure training</find>
       <find>multiply</find>
       <find>model_list</find>
+      <find>hits=&quot;1&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
@@ -223,11 +219,11 @@
         <option value="$PROJECT_DIR$/tests/test_prep_features.py" />
         <option value="$PROJECT_DIR$/housing_prices/prep_features.py" />
         <option value="$PROJECT_DIR$/housing_prices/export_data.py" />
-        <option value="$PROJECT_DIR$/housing_prices/main.py" />
         <option value="$PROJECT_DIR$/tests/test_transforms.py" />
         <option value="$PROJECT_DIR$/tests/test_model.py" />
         <option value="$PROJECT_DIR$/tests/test_utils.py" />
         <option value="$PROJECT_DIR$/tests/test_export.py" />
+        <option value="$PROJECT_DIR$/housing_prices/main.py" />
       </list>
     </option>
   </component>
@@ -256,23 +252,7 @@
             <path>
               <item name="housing-prices-final" type="b2602c69:ProjectViewProjectNode" />
               <item name="housing-prices-final" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="housing-prices-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="housing-prices-final" type="462c0819:PsiDirectoryNode" />
               <item name="housing_prices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="housing-prices-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="housing-prices-final" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="housing-prices-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="housing-prices-final" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="test_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="housing-prices-final" type="b2602c69:ProjectViewProjectNode" />
@@ -483,12 +463,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49117646" visible="true" weight="0.14028056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49117646" visible="true" weight="0.14028056" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.29739478" side_tool="true" weight="0.48210207" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498998" weight="0.3279939" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7026052" visible="true" weight="0.48283753" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7026052" visible="true" weight="0.48283753" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -534,8 +515,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/toy2.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/sklearn/utils/validation.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/pandas/util/_validators.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/sklearn/ensemble/forest.py" />
     <entry file="file://$PROJECT_DIR$/tests/toy.py" />
@@ -708,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/housing_prices/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="53" column="119" lean-forward="true" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -742,19 +711,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/housing_prices/export_data.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="13" selection-end-line="14" />
+        <state relative-caret-position="-829" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="412" column="38" lean-forward="true" selection-start-line="412" selection-start-column="38" selection-end-line="412" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_export.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="266">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#59#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/housing_prices/export_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="19" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/housing_prices/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

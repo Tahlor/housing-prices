@@ -1,6 +1,8 @@
 [
   "tests/test_export.py::test_export",
+  "tests/test_export.py::test_increment_path_version",
   "tests/test_import.py::test_import",
+  "tests/test_main.py::test_main",
   "tests/test_model.py::test_rmsl_metric",
   "tests/test_model.py::test_cv",
   "tests/test_model.py::test_run_full_model",

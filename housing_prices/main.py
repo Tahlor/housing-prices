@@ -38,8 +38,7 @@ def main(path_training, path_test, training_test_seed=None, output_path = r"./ou
     features, targets, test_features, _ = prep_features.main(training_df, test_df, use_log=USE_LOG, variable_combinations=keep_variables)
 
     # Optionally pull misc value out of sale price and add back in after
-    if exclude_misc:
-        targets = targets.drop(["SalePriceMiscVal"], axis=1)
+    targets = targets.drop(["SalePriceMiscVal"], axis=1)
 
     if not keep_variables is None:
         features = features[keep_variables]

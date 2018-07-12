@@ -2,3 +2,6 @@ venv/
 output/
 *.log
 ~archive/
+docs/
+*.xml
+.idea/

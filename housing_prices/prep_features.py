@@ -81,9 +81,10 @@ def main(training_df, test_df, use_log=True, variable_combinations=[]):
 
 
 def additional_transforms(df, variable_combinations):
-    """Take a list of variable names with defined transformations, and recreate these transforms
-            E.g.: A variable like var1_trans_quadratic_multiply_var2_trans_cubic_multiply would yield a new feature, defined by:
-                var1**2 * var2**3
+    """Take a list of variable names with defined transformations, and recreate these transforms.
+        E.g.: A variable like var1_trans_quadratic_multiply_var2_trans_cubic_multiply would yield a new feature, defined by:
+        var1**2 * var2**3
+
     Args:
         df (DataFrame): The dataframe containing features data.
         variable_combinations (list): List (str) of variables defined as above
@@ -548,8 +549,7 @@ def specific_transform(features, column_name, verbose=0):
     return combined_feature
 
 def create_vacuous_variables(reference, target, fill_value = 0):
-    """Make sure training/test data have same features (take union of features). This can arise from creating one-hot
-        encoded variables if one DataFrame has feature values not observed in the other DataFrame.
+    """Make sure training/test data have same features (take union of features). This can arise from creating one-hot encoded variables if one DataFrame has feature values not observed in the other DataFrame.
 
     Args:
         reference (DataFrame): Dataframe with complete set of variables for model

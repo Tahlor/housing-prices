@@ -1,6 +1,4 @@
 import os
-import pandas as pd
-import fnmatch
 
 def export_data(df, file_path, overwrite = False):
     #pd.to_numeric(df.columns(["Id"]), downcast='int')
@@ -19,6 +17,7 @@ def increment_path_version(full_path):
         (parent, child) = os.path.split(full_path)
         filename, file_extension = os.path.splitext(child)
         while True:
+            print("path already exists, incrementing...")
             new_path = os.path.join(parent, filename + " v_{:02d}".format(n) + file_extension)
             if os.path.exists(new_path):
                 n+=1

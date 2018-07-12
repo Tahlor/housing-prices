@@ -19,12 +19,23 @@ df = pd.DataFrame(data=d)
 d_missing = {'LotFrontage': [1, np.NaN], 'col2': [3, 4]}
 df_missing = pd.DataFrame(data=d_missing)
 
+comb_ops = ["add", "subtract", "multiply", "divide"]
+transforms_list = ["log", "inverse", "quadratic", "cubic", "root", "normal", "scale01"]
+
+
 # All of these tests should be expanded to test all possible transformations, including edge cases (0's, negatives, NaNs, etc.)
 
 def test_transform():
     new_df, _ = transforms.transform(df, rename = True, replace = False, trans_type = "quadratic", scaler = None, symmetric = None, verbose = 0)
     assert utils.checkEqual(new_df["col1_trans_quadratic"].values, [1,4])
     assert utils.checkEqual(new_df["col2_trans_quadratic"].values, [9,16])
+
+    # Verify the others at least run
+    for trans_type in transforms_list:
+        new_df, _ = transforms.transform(df, trans_type=trans_type)
+
+    for trans_type in comb_ops:
+        new_df, _ = transforms.transform(df, trans_type=trans_type)
 
 def test_perform_operations():
     new_df = transforms.perform_operations(df, "subtract", symmetric=False, verbose=0)

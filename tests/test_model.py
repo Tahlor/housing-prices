@@ -17,8 +17,8 @@ feats = pd.DataFrame(np.asarray([3, 4]))
 targs = pd.DataFrame(np.asarray([1, 6]))
 model_list = ["GradientBoosting", "ElasticNet", "RandomForest", "XGBoosting", "SGD", "ElasticNetCV", "Lasso", "SVR", "OLS"]
 
-def create_model():
-    model = model_functions.create_model(feats_with_id, targs, type="ElasticNet")
+def create_model(type="ElasticNet"):
+    model = model_functions.create_model(feats_with_id, targs, type=type)
     return model
 
 def test_rmsl_metric():

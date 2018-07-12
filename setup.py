@@ -21,7 +21,7 @@ except ImportError:
 from os import path
 setup(name='housing_prices',
       version='0.0.1',
-      description='Getting Started with Python unit testings, documentations, CI and code coverage',
+      description='Model AMES Iowa housing sale prices',
       long_description= "" if not path.isfile("README.md") else read_md('README.md'),
       author='Taylor Archibald',
       author_email='tahlor@gmail.com',

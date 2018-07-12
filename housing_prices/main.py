@@ -10,7 +10,7 @@ import import_data
 import model_functions
 import prep_features
 
-MODEL_TYPE = "ElasticNet" # "GradientBoosting" "RandomForest" "XGBoosting" "SGD" "ElasticNet" "Lasso" "Voting" "SVR" "NN" "auto"
+MODEL_TYPE = "OLS" # "GradientBoosting" "RandomForest" "XGBoosting" "SGD" "ElasticNet" "Lasso" "Voting" "SVR" "NN" "auto"
 IGNORE = ["Id","MiscVal"]
 EXC_MISC_VAL = False
 if not EXC_MISC_VAL:
@@ -39,16 +39,7 @@ def main(path_training, path_test, training_test_seed=None, output_path = r"./ou
 
     # Optionally pull misc value out of sale price and add back in after
     if exclude_misc:
-        targets = targets.drop(["SalePrice"], axis=1).rename(index=str, columns={"SalePriceMiscVal": "SalePrice"})
-    else:
         targets = targets.drop(["SalePriceMiscVal"], axis=1)
-
-    # Limit variables
-    #print("Keep Variables not created")
-    #print(set(keep_variables)-set(features.columns))
-    #print("Created variabls not kept")
-    #print(set(features.columns)-set(keep_variables))
-
 
     if not keep_variables is None:
         features = features[keep_variables]

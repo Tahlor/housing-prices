@@ -16,9 +16,6 @@ Welcome to housing-prices's documentation!
 .. automodule :: housing_prices.export_data
    :members:
 
-.. automodule :: housing_prices.reset_seed
-   :members:
-
 .. automodule :: housing_prices.utils
    :members:
 
@@ -34,8 +31,6 @@ Welcome to housing-prices's documentation!
 .. automodule :: housing_prices.main
    :members:
    
-.. automodule :: housing_prices.tools
-   :members:
 
 Indices and tables
 ==================

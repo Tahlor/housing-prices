@@ -46,6 +46,20 @@ def test_export():
     assert not os.path.exists(export_path)
     assert not os.path.exists(export_path1)
 
+def test_increment_path_version():
+    path=export_data.increment_path_version("./this.txt")
+    open(path, 'a').close()
+    path2 = export_data.increment_path_version("./this.txt")
+
+    assert not os.path.exists(path2)
+    open(path2, 'a').close()
+    assert path2!=path
+
+    os.remove(path)
+    os.remove(path2)
+
+
+
 if __name__=='__main__':
     test_export()
-
+    test_increment_path_version()

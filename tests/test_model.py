@@ -138,9 +138,8 @@ def test_models():
         model_functions.cv(my_model, features, targets)
 
 if __name__=='__main__':
-    #test_create_learner()
-    #test_rmsl_metric()
-    #test_cv()
-    #test_run_full_model()
+    test_rmsl_metric()
+    test_cv()
+    test_run_full_model()
     test_models()
 

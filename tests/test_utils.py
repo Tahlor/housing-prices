@@ -32,7 +32,7 @@ def test_reset_seed():
     assert np.random.get_state()[1][0] == 47
 
 if __name__=='__main__':
-    #test_drop_features()
-    #test_invert_dictionary()
-    #test_checkEqual()
+    test_drop_features()
+    test_invert_dictionary()
+    test_checkEqual()
     test_reset_seed()

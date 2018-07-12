@@ -1,13 +1,9 @@
 """Tests the import function defined in import_data.py
 """
 
-from housing_prices import model_functions
-from housing_prices import main
-from housing_prices import import_data
-from housing_prices import prep_features
-
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 import transforms
 import utils
 

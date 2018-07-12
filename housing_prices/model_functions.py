@@ -1,37 +1,16 @@
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.datasets import make_regression
-
 # Models
-from sklearn.ensemble import RandomForestRegressor, VotingClassifier, GradientBoostingRegressor
-from xgboost.sklearn import XGBRegressor
-from sklearn.linear_model import Ridge, RidgeCV, ElasticNet, ElasticNetCV, LassoCV, LassoLarsCV, SGDRegressor, \
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.linear_model import ElasticNet, ElasticNetCV, LassoCV, SGDRegressor, \
     LinearRegression
-from sklearn.svm import SVR
-from xgboost import plot_importance
-
-# Performance metrics
-from scipy.stats import spearmanr, pearsonr
-from sklearn.metrics import r2_score
-from sklearn.model_selection import cross_validate, cross_val_score
-
-# NN stuff
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, BatchNormalization
-from keras.wrappers.scikit_learn import KerasRegressor
-from keras.callbacks import EarlyStopping
-
 # Custom metric
 from sklearn.metrics import make_scorer
-
-import pandas as pd
-import numpy as np
+from sklearn.model_selection import cross_validate
+from sklearn.svm import SVR
+from xgboost.sklearn import XGBRegressor
+import utils
 import model
-
-# Hyperparameter tuning
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-
-import math
 
 
 def cv(model, features, targets, folds=5):
@@ -48,30 +27,11 @@ def cv(model, features, targets, folds=5):
     """
 
     scorer = make_scorer(rmsl_metric, greater_is_better=True)
-    cv_results = cross_validate(model.model, drop_features(features, model.ignore_features), targets,
+    cv_results = cross_validate(model.model, utils.drop_features(features, model.ignore_features), targets,
                                 return_train_score=False, cv=folds, scoring=scorer)
     score = np.mean(cv_results["test_score"])
     print("CV score: {}".format(score))
     return score
-
-
-def drop_features(features, ignore_features):
-    """Try to drop features that should be excluded from model, will not throw an error if variable not found
-
-    Args:
-        features (DataFrame): A DataFrame with features.
-        ignore_features (list): A list (str) with features to exclude from DataFrame
-
-    Returns:
-        DataFrame: DataFrame without features in ignore_features list
-    """
-    for f in ignore_features:
-        if f in features.columns:
-            #features.drop(f, inplace=True, axis=1)
-            features=features.drop(f, axis=1)
-        else:
-            print("{} not found in features".format(f))
-    return features
 
 
 def create_model(X_train, y_train, ignore_features=["Id"], type="GradientBoosting", X_validation=None,
@@ -163,7 +123,6 @@ def create_learner(type, n_features=None, X_validation=None, y_validation=None):
         print("Error, chosen model was not an option")
         return None
     return learner
-
 
 def run_full_model(my_model, X_train, y_train, X_test, y_test=None, ignore_features=["Id"], exclude_misc=False):
     """Run model, prepare summary of results

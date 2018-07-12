@@ -1,13 +1,12 @@
 """Tests the import function defined in import_data.py
 """
 
-from housing_prices import model_functions
-from housing_prices import main
-from housing_prices import import_data
-from housing_prices import prep_features
-
-import pandas as pd
 import numpy as np
+import pandas as pd
+
+from housing_prices import import_data
+from housing_prices import model_functions
+from housing_prices import prep_features
 
 feats_with_id = pd.DataFrame({'col1': [3, 4], 'Id': [1, 2]})
 feats = pd.DataFrame(np.asarray([3, 4]))
@@ -16,19 +15,6 @@ model_list = ["GradientBoosting", "GradientBoostingProduction", "ElasticNet", "R
               "NotARealModel"]
 
 model_list = ["OLS"]
-
-def test_drop_features():
-    assert ["Id"] in feats_with_id.columns.values
-    return_df  = model_functions.drop_features(feats_with_id, ["Id"])
-    assert not "Id" in return_df.columns.values
-
-def test_create_learner():
-    for model in model_list:
-        learner = model_functions.create_learner(type=model, n_features=feats_with_id.shape[1])
-        if not learner is None:
-            learner.fit(feats_with_id, targs)
-
-
 
 def create_model():
     model = model_functions.create_model(feats_with_id, targs, type="ElasticNet")
@@ -153,7 +139,6 @@ def test_models():
         model_functions.cv(my_model, features, targets)
 
 if __name__=='__main__':
-    #test_drop_features()
     #test_create_learner()
     #test_rmsl_metric()
     #test_cv()

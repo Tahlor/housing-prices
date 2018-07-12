@@ -1,11 +1,12 @@
 """Tests the import function defined in prep_features.py
 """
 
-import housing_prices
-from housing_prices import prep_features
-import pandas as pd
-import utils
 import numpy as np
+import pandas as pd
+
+import housing_prices
+import utils
+from housing_prices import prep_features
 
 train_path = r'../data/train.csv'
 
@@ -45,7 +46,7 @@ def test_feature_standardization():
     feats = test_recode_features()
     feats,_,_ = test_create_new_features(feats)
     feats, targs = prep_features.feature_standardization(feats)
-    utils.checkEqual(targs.columns.values[:], ["SalePrice]", "SalePriceMiscVal"])
+    assert utils.checkEqual(targs.columns.values[:], ["SalePrice]", "SalePriceMiscVal"])
 
 
 def test_recode_features():
@@ -77,7 +78,7 @@ def test_specific_transform():
     df = pd.DataFrame(data=d)
     col = "var1_trans_quadratic_multiply_var2_trans_cubic_multiply"
     result_col = prep_features.specific_transform(df, col, verbose=0)["var1_trans_quadratic_multiply_var2_trans_cubic_trans_multiply"]
-    utils.checkEqual(result_col.values, [27, 256])
+    assert utils.checkEqual(result_col.values, [27, 256])
 
 def test_create_vacuous_variables():
     # Make sure all features in reference dataframe are found in the final one

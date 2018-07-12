@@ -1,9 +1,11 @@
-from transforms import transform
-import pandas as pd
-import export_data
-from sklearn.preprocessing import Imputer
-import numpy as np
 import re
+
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import Imputer
+
+import export_data
+from transforms import transform
 
 pd.set_option('display.max_rows', 20)
 pd.set_option('display.max_columns', 20)

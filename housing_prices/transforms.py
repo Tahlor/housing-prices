@@ -1,7 +1,8 @@
+import warnings
+
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
-import warnings
 
 op_dict = {"+":np.add, "*":np.multiply,"/":np.divide,"-":np.subtract, "add":np.add, "multiply":np.multiply,"divide":np.divide,"subtract":np.subtract}
 
@@ -169,25 +170,29 @@ def perform_single_op(df1, df2, op, col_name, verbose = 0):
     return new_col
 
 
-def rescale(features, scaler = None, scaling_type= None):
+def rescale(features, scaler = None, scaling_type= None, verbose=0):
     """Rescale a variable (e.g. to 0-1, -1-1 normal etc.
 
     Args:
         features (DataFrame): The dataframe containing data to rescale.
         scaler (sklearn scaler): If predefined scaler object available
         scalting_type (str): Type of scaler (str) if scaler not specified
+        verbose (int, optional): Verbose printing
+
     Returns:
         tuple:
             DataFrame: All features, with newly transformed features
             Scaler obj: The scaler object used for the transform
+
     Except:
         ValueError: If scaling type and scaler are None, invalid etc.
     """
+    vprint = print if verbose else lambda *a, **k: None
 
     if scaling_type is None and scaler is None:
         raise ValueError('Scaler and scaling_type cannot both be None.')
     if not (scaling_type is None and scaler is None):
-        print("Scaler object and scaling type both specified, using scaler object")
+        vprint("Scaler object and scaling type both specified, using scaler object")
 
     if scaler is None:
         if scaling_type =="normal":

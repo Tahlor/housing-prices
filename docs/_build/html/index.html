@@ -1,0 +1,350 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to housing-prices’s documentation! &#8212; housing-prices 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-housing-prices-s-documentation">
+<h1>Welcome to housing-prices’s documentation!<a class="headerlink" href="#welcome-to-housing-prices-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-housing_prices.prep_features"></span><dl class="function">
+<dt id="housing_prices.prep_features.create_market_index">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">create_market_index</code><span class="sig-paren">(</span><em>features, index_name='time', vars=['Season', 'YrSold']</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.create_market_index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Perform all data preprocessing steps, including:</dt>
+<dd><ul class="first last simple">
+<li>Recoding variables, e.g. converting categorical to ordinal variables</li>
+<li>Create novel features by combining old ones</li>
+<li>Standardize features - Drop outliers, drop features, set feature types (e.g. categorical)</li>
+<li>Impute missing variables</li>
+<li>Create dummy/one-hot-encoded variables</li>
+<li>“Rectangularize” data by ensuring train/test have the same features</li>
+<li>Scale, transform, or normalize features</li>
+</ul>
+</dd>
+<dt>Args:</dt>
+<dd>training_df (DataFrame): The dataframe containing training data.
+test_df (DataFrame): The dataframe containing training data.</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(tuple): tuple containing:</dt>
+<dd>training_df(DataFrame): Processed features (X) for training data
+targets (DataFrame): Processed targets (y) for training data
+test_df(DataFrame): Processed features for test set
+test_targets (DataFrame): Processed targets for test set</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.create_new_features">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">create_new_features</code><span class="sig-paren">(</span><em>features</em>, <em>market_index=None</em>, <em>neighborhood_index=None</em>, <em>MoSold_or_Season_index='Season'</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.create_new_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine features to generate new features.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing training data.
+market_index (DataFrame): The dataframe mapping time periods to index values.
+neighborhood_index (DataFrame): The dataframe mapping neighborhoods to index values.
+MoSold_or_Season_index (str): Whether to index seasonly or monthly</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(tuple): tuple containing:</dt>
+<dd>features(DataFrame): DataFrame with original features combined with newly created ones
+market_index (DataFrame): The dataframe mapping time periods to index values.
+neighborhood_index (DataFrame): The dataframe mapping neighborhoods to index values.</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.create_vacuous_variables">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">create_vacuous_variables</code><span class="sig-paren">(</span><em>reference</em>, <em>target</em>, <em>fill_value=0</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.create_vacuous_variables" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Make sure training/test data have same features (take union of features). This can arise from creating one-hot</dt>
+<dd>encoded variables if one DataFrame has feature values not observed in the other DataFrame.</dd>
+<dt>Args:</dt>
+<dd>reference (DataFrame): Dataframe with complete set of variables for model
+target (DataFrame): Dataframe with possibly incomplete set of variables</dd>
+<dt>Returns:</dt>
+<dd>DataFrame: The result DataFrame corresponding to the target DataFrame argument passed</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.feature_standardization">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">feature_standardization</code><span class="sig-paren">(</span><em>features</em>, <em>target_column='SalePrice'</em>, <em>features_to_remove=[]</em>, <em>use_log=True</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.feature_standardization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare features, including dropping outliers, dropping features, setting feature types (e.g. categorical), selecting target/y feature, etc.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing training data.
+target_column (str): Name of target variable.
+features_to_remove(list(str)): Name of target variable.</dd>
+<dt>Returns:</dt>
+<dd>bool: True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.get_dummies">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">get_dummies</code><span class="sig-paren">(</span><em>features</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.get_dummies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get dummy/one-hot encoded variables for categorical variables</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing training data.</dd>
+<dt>Returns:</dt>
+<dd>new_features(DataFrame): DataFrame with original features with categorical variables converted into binary dummy variables</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.get_features">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">get_features</code><span class="sig-paren">(</span><em>features</em>, <em>search_term</em>, <em>ignore_case=True</em>, <em>inverse=False</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.get_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all variables that match a partial search string.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing data to search.
+search_term (str): The search term.
+ignore_case (bool): Whether to ignore case when finding matches.
+inverse (bool): Return all variables that don’t match search string</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(list): list containing:</dt>
+<dd>(str) List of variables matching search string</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.impute_missings">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">impute_missings</code><span class="sig-paren">(</span><em>features</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.impute_missings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that takes a dictionary mapping current feature values to desired values.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing data to search.
+column (str): The column to recode.
+mapping (dict): A dictionary of the form {current_variable_value:desired_variable_value}
+make_numeric (bool): Convert feature to numeric
+missing (value): A value to fill missing observations</dd>
+<dt>Returns:</dt>
+<dd>DataFrame: All features, with newly recoded features</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.main">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">main</code><span class="sig-paren">(</span><em>training_df</em>, <em>test_df</em>, <em>use_log=True</em>, <em>variable_combinations=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.main" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Perform all data preprocessing steps, including:</dt>
+<dd><ul class="first last simple">
+<li>Recoding variables, e.g. converting categorical to ordinal variables</li>
+<li>Create novel features by combining old ones</li>
+<li>Standardize features - Drop outliers, drop features, set feature types (e.g. categorical)</li>
+<li>Impute missing variables</li>
+<li>Create dummy/one-hot-encoded variables</li>
+<li>“Rectangularize” data by ensuring train/test have the same features</li>
+<li>Scale, transform, or normalize features</li>
+</ul>
+</dd>
+<dt>Args:</dt>
+<dd>training_df (DataFrame): The dataframe containing training data.
+test_df (DataFrame): The dataframe containing training data.</dd>
+<dt>Returns:</dt>
+<dd><dl class="first last docutils">
+<dt>(tuple): tuple containing:</dt>
+<dd>training_df(DataFrame): Processed features (X) for training data
+targets (DataFrame): Processed targets (y) for training data
+test_df(DataFrame): Processed features for test set
+test_targets (DataFrame): Processed targets for test set</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.recode">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">recode</code><span class="sig-paren">(</span><em>features</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.recode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recode variables, e.g. converting categorical to ordinal variables.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing data to recode.</dd>
+<dt>Returns:</dt>
+<dd>DataFrame: All features, with newly recoded features</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.recode_features">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">recode_features</code><span class="sig-paren">(</span><em>features</em>, <em>column</em>, <em>mapping</em>, <em>make_numeric=True</em>, <em>missing=None</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.recode_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that takes a dictionary mapping current feature values to desired values.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing data to search.
+column (str): The column to recode.
+mapping (dict): A dictionary of the form {current_variable_value:desired_variable_value}
+make_numeric (bool): Convert feature to numeric
+missing (value): A value to fill missing observations</dd>
+<dt>Returns:</dt>
+<dd>DataFrame: All features, with newly recoded features</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.smart_impute">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">smart_impute</code><span class="sig-paren">(</span><em>features</em>, <em>features_to_impute=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.smart_impute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Impute missing values using MICE.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>features (DataFrame): The dataframe containing data to impute.
+features_to_impute (list): List of string features to impute. If empty, all floats are imputed.</dd>
+<dt>Returns:</dt>
+<dd>DataFrame: All features, with newly recoded features</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="housing_prices.prep_features.transform_features">
+<code class="descclassname">housing_prices.prep_features.</code><code class="descname">transform_features</code><span class="sig-paren">(</span><em>features</em>, <em>scaler_normal=None</em>, <em>scaler_01=None</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.prep_features.transform_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepare features, including handling missing values, normalization, PCA, etc.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>url  (string): The download address.
+path (string): The location to save the download.</dd>
+<dt>Returns:</dt>
+<dd>bool: True if successful, False otherwise.</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-housing_prices.export_data"></span><dl class="function">
+<dt id="housing_prices.export_data.find_files">
+<code class="descclassname">housing_prices.export_data.</code><code class="descname">find_files</code><span class="sig-paren">(</span><em>base</em>, <em>pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.export_data.find_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of files matching pattern in base folder.</p>
+</dd></dl>
+
+<span class="target" id="module-housing_prices.reset_seed"></span><span class="target" id="module-housing_prices.utils"></span><span class="target" id="module-housing_prices.model"></span><p>A lightweight wrapper for a Sci-kit learn learner</p>
+<span class="target" id="module-housing_prices.import_data"></span><dl class="function">
+<dt id="housing_prices.import_data.process_data">
+<code class="descclassname">housing_prices.import_data.</code><code class="descname">process_data</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.import_data.process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a data file path input and returns a Pandas dataframe.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>path (str): The path to the data file.</dd>
+<dt>Returns:</dt>
+<dd>DataFrame</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-housing_prices.transforms"></span><span class="target" id="module-housing_prices.main"></span><dl class="function">
+<dt id="housing_prices.main.main">
+<code class="descclassname">housing_prices.main.</code><code class="descname">main</code><span class="sig-paren">(</span><em>path_training</em>, <em>path_test</em>, <em>training_test_seed=None</em>, <em>output_path='./output.csv'</em>, <em>model_type='Lasso'</em>, <em>exclude_misc=False</em>, <em>keep_variables=None</em><span class="sig-paren">)</span><a class="headerlink" href="#housing_prices.main.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes data, predicts housing prices, saves predictions.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>path_training  (str): Path to training data.
+path_test (str): Path to test data.
+training_test_seed (int, optional): Random seed for internal training/test split.
+output_path ( str): Location to save predicitions</dd>
+<dt>Returns:</dt>
+<dd>None</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-housing_prices.tools"></span></div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to housing-prices’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Taylor Archibald.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

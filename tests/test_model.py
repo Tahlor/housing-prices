@@ -7,6 +7,10 @@ import pandas as pd
 from housing_prices import import_data
 from housing_prices import model_functions
 from housing_prices import prep_features
+import os
+dirname = os.path.dirname(__file__)
+test_path  = os.path.join(dirname, r'test_data/test.csv')
+train_path = os.path.join(dirname, r'test_data/train.csv')
 
 feats_with_id = pd.DataFrame({'col1': [3, 4], 'Id': [1, 2]})
 feats = pd.DataFrame(np.asarray([3, 4]))
@@ -41,8 +45,6 @@ def test_run_full_model():
 # Full test of models
 def test_models():
 
-    test_path = r'../data/test.csv'
-    train_path = r'../data/train.csv'
     keep_variables = ['1stFlrSF_cont_trans_log', 'Neighborhood_MeadowV_orig_categ', 'LotArea_cont_trans_log',
                       'Neighborhood_Crawfor_orig_categ', 'BsmtFinType2_orig_ord', 'MSZoning_FV_orig_categ',
                       'Neighborhood_StoneBr_orig_categ', 'Heating_Grav_orig_categ', 'HouseAge_cont_trans_normal',

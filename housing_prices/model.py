@@ -8,5 +8,5 @@ class model:
         self.learner_type = learner_type
 
     def predict(self, features):
-        features = utils.drop_features(self.ignore_features)
+        features = utils.drop_features(features, self.ignore_features)
         return self.model.predict(features)

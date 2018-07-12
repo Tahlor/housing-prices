@@ -7,8 +7,12 @@ import pandas as pd
 import housing_prices
 import utils
 from housing_prices import prep_features
+import os
 
-train_path = r'../data/train.csv'
+dirname = os.path.dirname(__file__)
+export_path  = os.path.join(dirname, r'test_data/train_export.csv')
+train_path = os.path.join(dirname, r'test_data/train.csv')
+
 
 d = {'col1': [1, 2], 'col2': [3, 4]}
 df = pd.DataFrame(data=d)
@@ -19,11 +23,9 @@ df_missing = pd.DataFrame(data=d_missing)
 real_df = housing_prices.import_data.process_data(train_path)
 
 def test_import():
-    train_path = r'../../data/train.csv'
     assert real_df.shape == (1460, 81)
 
 def test_create_market_index():
-    train_path = r'../data/train.csv'
     real_df['TotalSQF'] = real_df['TotalBsmtSF'] + real_df['GrLivArea']
     index = prep_features.create_market_index(real_df, index_name="time", vars=["MoSold", "YrSold"])
     assert (index["time_index"] > .5).all() and (index["time_index"] < 1.5).all()
@@ -46,7 +48,7 @@ def test_feature_standardization():
     feats = test_recode_features()
     feats,_,_ = test_create_new_features(feats)
     feats, targs = prep_features.feature_standardization(feats)
-    assert utils.checkEqual(targs.columns.values[:], ["SalePrice]", "SalePriceMiscVal"])
+    assert utils.checkEqual(targs.columns.values[:], ["SalePrice", "SalePriceMiscVal"])
 
 
 def test_recode_features():

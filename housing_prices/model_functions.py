@@ -60,6 +60,8 @@ def create_model(X_train, y_train, ignore_features=["Id"], type="GradientBoostin
     n_features = X_train.shape[1]
 
     learner = create_learner(type, n_features=n_features, X_validation=X_validation, y_validation=y_validation)
+    if learner is None:
+        raise ValueError("Must use valid learner type.")
 
     learner.fit(X_train, y_train)
     if type in ['Lasso', 'ElasticNet']:

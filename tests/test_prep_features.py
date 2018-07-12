@@ -1,4 +1,4 @@
-"""Tests the import function defined in prep_features.py
+"""Tests the prep_features functions defined in prep_features.py
 """
 
 import numpy as np

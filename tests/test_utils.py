@@ -1,4 +1,4 @@
-"""Tests the import function defined in import_data.py
+"""Tests the import function defined in utils.py
 """
 
 import numpy as np

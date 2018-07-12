@@ -1,3 +1,7 @@
+import os
+import random as rn
+import numpy as np
+
 
 def invert_dictionary(d):
     """Swap keys and values in dictionary, where values are a list. Lists should be mutually exclusive.
@@ -18,9 +22,6 @@ def reset_seed(seed=42):
         Returns:
             None
         """
-    import numpy as np
-    import random as rn
-    import os
     os.environ['PYTHONHASHSEED'] = '0'
     np.random.seed(seed)
     rn.seed(seed)

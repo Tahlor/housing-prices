@@ -3,7 +3,7 @@
 
 import numpy as np
 import pandas as pd
-from housing_prices import model_functions
+
 import utils
 
 feats_with_id = pd.DataFrame({'col1': [3, 4], 'Id': [1, 2]})

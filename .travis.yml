@@ -1,0 +1,17 @@
+sudo: true
+language: python
+cache: pip
+python:
+  - "3.5"
+
+addons:
+    apt:
+        packages:
+            - pandoc
+# command to install dependencies
+install:
+  - pip install --upgrade -r requirements.txt
+  - pip install --upgrade .
+  - pip install --upgrade tox-travis
+# command to run tests
+script: tox

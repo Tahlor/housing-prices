@@ -5,10 +5,10 @@ cmdargs: ['/usr/bin/python3', local('/medic/github/housing-prices-final/setup.py
 warning: pypandoc module not found, could not convert Markdown to RST
 running sdist
 running egg_info
-writing housing_prices.egg-info/PKG-INFO
-writing requirements to housing_prices.egg-info/requires.txt
-writing top-level names to housing_prices.egg-info/top_level.txt
 writing dependency_links to housing_prices.egg-info/dependency_links.txt
+writing housing_prices.egg-info/PKG-INFO
+writing top-level names to housing_prices.egg-info/top_level.txt
+writing requirements to housing_prices.egg-info/requires.txt
 reading manifest file 'housing_prices.egg-info/SOURCES.txt'
 writing manifest file 'housing_prices.egg-info/SOURCES.txt'
 running check

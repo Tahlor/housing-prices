@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b83983b-7485-4c06-95b7-132fd9fdb414" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/housing_prices/model_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/model_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="375">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding>
                 <element signature="e#60#78#0" expanded="true" />
               </folding>
@@ -49,8 +43,8 @@
       <file leaf-file-name="model_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/housing_prices/model_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="558">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#9#27#0" expanded="true" />
               </folding>
@@ -97,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="510">
+              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding>
                 <element signature="e#60#78#0" expanded="true" />
               </folding>
@@ -144,9 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fancy</find>
-      <find>test_run_full_model</find>
-      <find>col_name</find>
       <find>SVR</find>
       <find>= True if</find>
       <find>.any()</find>
@@ -174,6 +165,9 @@
       <find>production</find>
       <find>Production</find>
       <find>model_li</find>
+      <find>learner</find>
+      <find>learner.</find>
+      <find>model_list</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
@@ -232,9 +226,9 @@
         <option value="$PROJECT_DIR$/tests/test_export.py" />
         <option value="$PROJECT_DIR$/housing_prices/import_data.py" />
         <option value="$PROJECT_DIR$/housing_prices/utils.py" />
+        <option value="$PROJECT_DIR$/tests/test_utils.py" />
         <option value="$PROJECT_DIR$/housing_prices/model_functions.py" />
         <option value="$PROJECT_DIR$/tests/test_model.py" />
-        <option value="$PROJECT_DIR$/tests/test_utils.py" />
       </list>
     </option>
   </component>
@@ -738,10 +732,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="e#60#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/housing_prices/model_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="558">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#9#27#0" expanded="true" />
           </folding>
@@ -750,18 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="e#60#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state relative-caret-position="375">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
             <element signature="e#60#78#0" expanded="true" />
           </folding>

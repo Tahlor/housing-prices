@@ -18,19 +18,12 @@ def reset_seed(seed=42):
         Returns:
             None
         """
-
     import numpy as np
-    import tensorflow as tf
     import random as rn
     import os
     os.environ['PYTHONHASHSEED'] = '0'
     np.random.seed(seed)
     rn.seed(seed)
-    session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
-    from keras import backend as K
-    tf.set_random_seed(seed)
-    sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
-    K.set_session(sess)
 
 def checkEqual(L1, L2):
     """Compare lists for equal elements (ignore order).

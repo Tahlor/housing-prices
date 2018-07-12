@@ -21,5 +21,6 @@
   "tests/test_transforms.py::test_rescale",
   "tests/test_utils.py::test_drop_features",
   "tests/test_utils.py::test_invert_dictionary",
-  "tests/test_utils.py::test_checkEqual"
+  "tests/test_utils.py::test_checkEqual",
+  "tests/test_utils.py::test_reset_seed"
 ]

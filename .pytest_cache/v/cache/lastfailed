@@ -1,3 +1,5 @@
 {
-  "tests/test_prep.py": true
+  "tests/test_model.py::test_models": true,
+  "tests/test_prep.py": true,
+  "tests/test_utils.py::test_reset_seed": true
 }

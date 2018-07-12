@@ -15,7 +15,7 @@ train_path = os.path.join(dirname, r'test_data/train.csv')
 feats_with_id = pd.DataFrame({'col1': [3, 4], 'Id': [1, 2]})
 feats = pd.DataFrame(np.asarray([3, 4]))
 targs = pd.DataFrame(np.asarray([1, 6]))
-model_list = ["GradientBoosting", "GradientBoostingProduction", "ElasticNet", "RandomForest", "XGBoosting", "SGD", "ElasticNetCV", "Lasso", "SVR", "OLS",
+model_list = ["GradientBoosting", "ElasticNet", "RandomForest", "XGBoosting", "SGD", "ElasticNetCV", "Lasso", "SVR", "OLS",
               "NotARealModel"]
 
 def create_model():

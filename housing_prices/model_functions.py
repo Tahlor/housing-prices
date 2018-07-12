@@ -98,10 +98,6 @@ def create_learner(type, n_features=None, X_validation=None, y_validation=None):
         params = {'n_estimators': 200, 'max_depth': 4, 'min_samples_split': 2,
                   'learning_rate': 0.05, 'loss': 'ls', 'verbose': 0, 'subsample': .7}
         learner = GradientBoostingRegressor(**params)
-    elif type == "GradientBoostingProduction":
-        params = {'n_estimators': 2000, 'max_depth': 4, 'min_samples_split': 2,
-                  'learning_rate': 0.01, 'loss': 'ls', 'verbose': 0, 'subsample': .6}
-        learner = GradientBoostingRegressor(**params)
     elif type == "XGBoosting":
         params = {'n_estimators': 200, 'colsample_bytree': 0.9083255949777539, 'subsample': 0.9875583602680632,
                   'min_child_weight': 3.3691725891936293, 'max_depth': 12, 'learning_rate': 0.1979044659137234,

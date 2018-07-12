@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4b83983b-7485-4c06-95b7-132fd9fdb414" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/dist/housing_prices-0.0.1.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices-0.0.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/export_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/export_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/housing_prices/export_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/export_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/housing_prices/import_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/import_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/housing_prices/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/.tox/py35/lib/python3.5/site-packages/housing_prices/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/housing_prices/model_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/housing_prices/model_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +37,8 @@
       <file leaf-file-name="test_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="9" selection-end-line="13" />
+            <state relative-caret-position="208">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
                 <element signature="e#60#78#0" expanded="true" />
               </folding>
@@ -52,8 +49,11 @@
       <file leaf-file-name="model_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/housing_prices/model_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="228">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="e#9#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +91,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/housing_prices/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="90">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -100,8 +100,8 @@
       <file leaf-file-name="test_utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="180">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding>
                 <element signature="e#60#78#0" expanded="true" />
               </folding>
@@ -144,9 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tOTALsqf</find>
-      <find>features</find>
-      <find>cv(</find>
       <find>fancy</find>
       <find>test_run_full_model</find>
       <find>col_name</find>
@@ -174,6 +171,9 @@
       <find>features = utils.drop_features</find>
       <find>print(</find>
       <find>train_path</find>
+      <find>production</find>
+      <find>Production</find>
+      <find>model_li</find>
     </findStrings>
     <replaceStrings>
       <replace>:</replace>
@@ -223,17 +223,17 @@
         <option value="$PROJECT_DIR$/tests/test_transforms.py" />
         <option value="$PROJECT_DIR$/housing_prices/prep_features.py" />
         <option value="$PROJECT_DIR$/housing_prices/main.py" />
-        <option value="$PROJECT_DIR$/housing_prices/model_functions.py" />
         <option value="$PROJECT_DIR$/housing_prices/transforms.py" />
         <option value="$PROJECT_DIR$/tests/test_import.py" />
         <option value="$PROJECT_DIR$/tests/test_prep_features.py" />
-        <option value="$PROJECT_DIR$/tests/test_model.py" />
         <option value="$PROJECT_DIR$/housing_prices/model.py" />
         <option value="$PROJECT_DIR$/tests/test_main" />
         <option value="$PROJECT_DIR$/housing_prices/export_data.py" />
         <option value="$PROJECT_DIR$/tests/test_export.py" />
         <option value="$PROJECT_DIR$/housing_prices/import_data.py" />
         <option value="$PROJECT_DIR$/housing_prices/utils.py" />
+        <option value="$PROJECT_DIR$/housing_prices/model_functions.py" />
+        <option value="$PROJECT_DIR$/tests/test_model.py" />
         <option value="$PROJECT_DIR$/tests/test_utils.py" />
       </list>
     </option>
@@ -492,11 +492,11 @@
     <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49117646" visible="true" weight="0.14028056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49117646" visible="true" weight="0.14028056" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.29739478" side_tool="true" weight="0.48210207" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498998" weight="0.32875666" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7026052" visible="true" weight="0.48283753" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7026052" visible="true" weight="0.48283753" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -687,23 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="9" selection-end-line="13" />
-          <folding>
-            <element signature="e#60#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/housing_prices/model_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/housing_prices/export_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -750,15 +733,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/housing_prices/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="90">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/housing_prices/model_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="e#9#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <element signature="e#60#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="180">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
           <folding>
             <element signature="e#60#78#0" expanded="true" />
           </folding>

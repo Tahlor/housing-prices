@@ -32,7 +32,9 @@ def test_transform():
 
     # Verify the others at least run
     for trans_type in transforms_list:
-        new_df, _ = transforms.transform(df, trans_type=trans_type)
+        new_df, scaler = transforms.transform(df, trans_type=trans_type)
+        if trans_type in ["normal", "scale01"]:
+            new_df, _ = transforms.transform(df, scaler=scaler)
 
     for trans_type in comb_ops:
         new_df, _ = transforms.transform(df, trans_type=trans_type)

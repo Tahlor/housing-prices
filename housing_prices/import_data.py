@@ -12,5 +12,5 @@ def process_data(path):
     df = pd.read_csv(path)
     return df
 
-if __name__=="__main__":
+if __name__=="__main__": #pragma: no cover
     df = process_data(r'../data/train.csv')

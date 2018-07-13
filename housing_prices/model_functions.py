@@ -68,7 +68,7 @@ def create_model(X_train, y_train, ignore_features=["Id"], type="GradientBoostin
         coef = pd.Series(learner.coef_, index=X_train.columns)
         non_zero_indices = list(np.where(coef != 0)[0])
         variables_chosen = X_train.columns[non_zero_indices]
-        if verbose:
+        if verbose: # pragma: no cover
             print("Alpha {}".format(learner.alpha_))
             print(variables_chosen)
             print("Kept {} variables".format(len(non_zero_indices)))
@@ -118,8 +118,7 @@ def create_learner(type, n_features=None, X_validation=None, y_validation=None):
     elif type == "SVR":
         learner = SVR(kernel='poly', C=1e3, verbose=0)
     else:
-        print("Error, chosen model was not an option")
-        return None
+        raise ValueError("Error, chosen model was not an option")
     return learner
 
 def run_full_model(my_model, X_train, y_train, X_test, y_test=None, ignore_features=["Id"], exclude_misc=False):
@@ -146,7 +145,7 @@ def run_full_model(my_model, X_train, y_train, X_test, y_test=None, ignore_featu
     if exclude_misc:
         predicted_test["SalePrice"] += X_test["MiscVal"]
 
-    if not y_test is None:
+    if not y_test is None: # pragma: no cover
         pass # evaluate test data against known test values
     else:
         submission_df = pd.concat([X_test["Id"],pd.DataFrame(predicted_test, columns=["SalePrice"])], axis=1)
@@ -174,5 +173,5 @@ def rmsl_metric(ground_truth, predictions, take_log=False):
     else:
         return np.sqrt(np.mean((np.log(1 + predictions) - np.log(1 + ground_truth)) ** 2))
 
-if __name__ == '__main__':
+if __name__ == '__main__': # pragma: no cover
     pass
